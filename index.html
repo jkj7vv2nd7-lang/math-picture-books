@@ -121,6 +121,13 @@ function renderPage(){
       return d;
     };
     if (b.corner) extra.appendChild(mk(u.corner, b.corner[lang]));
+    if (b.id === 'davinci') {
+      const fig = document.createElement('img');
+      fig.src = 'dav-zu.jpg';
+      fig.alt = lang === 'ja' ? 'ダ・ヴィンチブリッジの組み方（図解）' : 'How to build the Da Vinci bridge (diagram)';
+      fig.style.cssText = 'display:block;width:100%;max-width:760px;margin:18px auto 4px;border:1px solid #e5ddc8;border-radius:12px';
+      extra.appendChild(fig);
+    }
     if (b.id === 'platonic') {
       const fig = document.createElement('img');
       fig.src = 'pla-zu.jpg';
